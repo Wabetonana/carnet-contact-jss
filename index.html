@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet de contacts</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+
+        table {
+          border-collapse: collapse; 
+          border-spacing: 0;
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+        
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even){background-color: #f2f2f2}
+        </style>
+</head>
+<body>
+    <button id="btn" type="submit" onclick="ShowFrm()">Creer un contact</button>
+    <table>
+        <tr>
+            <td>
+                <form id="form1" action="" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    
+                    <div>
+                        <label for="">Nom</label>
+                    <input class="txt" autofocus type="text" name="nom" id="nom">
+                    </div>
+                    <div>
+                        <label for="">Prénom</label>
+                    <input type="text" name="prenom" id="prenom">
+                    </div>
+                    <div>
+                        <label for="">Postnom</label>
+                    <input type="text" name="postnom" id="postnom">
+                    </div>
+                    <div>
+                        <label for="">Telephone</label>
+                    <input type="text" name="telephone" id="telephone">
+                    </div>
+                    <div>
+                        <label for="">Email</label>
+                    <input type="text" name="email" id="email">
+                    </div>
+                    <div>
+                        <label for="">Ville</label>
+                    <input type="text" name="ville" id="ville">
+                    </div>
+                    <div>
+                        <label for="">Pays</label>
+                    <input type="text" name="pays" id="pays">
+                    </div>
+                    <div>
+                        <input id="addbtn" type="submit" value="Ajouter" onclick="hiedefrm()">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="contactlist">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Postnom</th>
+                            <th>Telephone</th>
+                            <th>Email</th>
+                            <th>ville</th>
+                            <th>Pays</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="js/js.js"></script>
+</body>
+</html>
